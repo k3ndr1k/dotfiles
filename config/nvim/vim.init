@@ -1,0 +1,109 @@
+" smart identation
+filetype plugin indent on
+
+" Enable mouse support  
+set mouse=a  
+
+" Enable system clipboard support  
+set clipboard=unnamedplus  
+
+" Display the status bar  
+set laststatus=3
+
+" Maximum command history  
+set history=512  
+
+" Show partially typed commands  
+set showcmd  
+
+" Color scheme  
+" (default, desert, elflord, evening, industry, koehler, morning, murphy, pablo, peachpuff, ron, shine, slate, torte, zellner)  
+colorscheme default
+
+" Enable support for true colors  
+set termguicolors  
+
+" Maximum characters per line (0 disables)  
+set textwidth=0  
+
+" Highlight matching ({[]})  
+set showmatch  
+
+" Highlight the line where the cursor is located  
+set cursorline  
+
+" Add some appearance to the cursorline  
+highlight CursorLine cterm=NONE ctermbg=darkgrey guibg=#2e2e2e  
+
+" Display cursor position  
+set ruler  
+
+" Show line numbers  
+set number  
+
+" Configure the width of the line number column  
+set numberwidth=1  
+
+" Enable relative line numbers (disabled for now)  
+"set relativenumber  
+
+" Auto-indent  
+set autoindent  
+set smartindent  
+
+" Enable tabulation  
+set tabstop=4
+set shiftwidth=4
+set expandtab  
+
+" Disable swap files  
+set nobackup  
+set nowritebackup  
+set noswapfile  
+
+" Ignore case during searches  
+set wildignorecase
+
+" Case-sensitive search  
+set ignorecase  
+
+" Smart case search: overrides ignorecase if the query includes uppercase  
+set smartcase  
+
+" Show search results as you type (incremental search)  
+set incsearch  
+
+
+"""""""""""""""""""""""""""  
+""""       SHORTCUTS     """"
+"""""""""""""""""""""""""""  
+
+" Clear all searches  
+nnoremap <silent><Esc><Esc> :nohlsearch<CR>  
+
+" Move with h, j, k, l in insert mode  
+inoremap <C-h> <Left>  
+inoremap <C-j> <Down>  
+inoremap <C-k> <Up>  
+inoremap <C-l> <Right>  
+
+" enable transparency
+augroup TransparentBG
+  autocmd!
+  autocmd VimEnter,ColorScheme * hi Normal       guibg=NONE ctermbg=NONE
+  autocmd VimEnter,ColorScheme * hi NormalNC     guibg=white ctermbg=NONE
+  autocmd VimEnter,ColorScheme * hi NonText      guibg=white ctermbg=NONE
+  autocmd VimEnter,ColorScheme * hi LineNr       guibg=NONE ctermbg=NONE
+  autocmd VimEnter,ColorScheme * hi SignColumn   guibg=NONE ctermbg=NONE
+  autocmd VimEnter,ColorScheme * hi VertSplit    guibg=NONE ctermbg=NONE
+  autocmd VimEnter,ColorScheme * hi StatusLine   guibg=NONE ctermbg=NONE 
+  autocmd VimEnter,ColorScheme * hi StatusLine   guifg=#c1c1c1 ctermfg=NONE
+  autocmd VimEnter,ColorScheme * hi StatusLineNC guibg=NONE ctermbg=NONE
+  autocmd VimEnter,ColorScheme * hi Pmenu        guibg=NONE ctermbg=NONE
+  autocmd VimEnter,ColorScheme * hi PmenuSel     guibg=#5e5e5e
+  autocmd VimEnter,ColorScheme * hi PmenuSbar    guibg=white ctermbg=NONE
+  autocmd VimEnter,ColorScheme * hi PmenuThumb   guibg=white
+  autocmd VimEnter,ColorScheme * hi CursorLine   guibg=#2e2e2e
+  autocmd VimEnter,ColorScheme * hi Visual       guibg=#3e3e3e
+augroup END
+
