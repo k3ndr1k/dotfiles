@@ -1,0 +1,43 @@
+# ==============================
+#         Aliases list 
+# ==============================
+
+# go back directories
+alias ..='cd ../'
+alias ..='cd ../../'
+
+# 'rm | cp | mv' commands
+alias rm='rm -vi'
+alias cp='cp -vi'
+alias mv='mv -vi'
+
+# 'ls' command
+alias ls='lsd --color=auto'
+alias ll='ls -lh'
+alias la='ls -lhA'
+alias lx='ls -hAX'
+alias lA='ls -lhA'
+
+# 'tree' command
+alias tree='tree -C'
+
+# 'grep | egrep' commands
+alias grep='grep --color=auto'
+alias egrep='egre --color=auto'
+
+# 'bat' command
+alias bat='bat -p -n -f --tabs 4'
+
+# 'ip' command
+alias ip='ip -c'
+
+# 'ping' command
+alias ping='ping -c 3 -W 10'
+
+# secure deletion
+alias shrm='shred -u'
+
+# edit aliases settings
+alias vialias='nvim ~/.aliases'
+alias reload-aliases='source ~/.aliases'
+
