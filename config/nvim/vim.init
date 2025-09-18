@@ -92,7 +92,7 @@ augroup TransparentBG
   autocmd!
   autocmd VimEnter,ColorScheme * hi Normal       guibg=NONE ctermbg=NONE
   autocmd VimEnter,ColorScheme * hi NormalNC     guibg=white ctermbg=NONE
-  autocmd VimEnter,ColorScheme * hi NonText      guibg=white ctermbg=NONE
+  autocmd VimEnter,ColorScheme * hi NonText      guibg=NONE ctermbg=NONE
   autocmd VimEnter,ColorScheme * hi LineNr       guibg=NONE ctermbg=NONE
   autocmd VimEnter,ColorScheme * hi SignColumn   guibg=NONE ctermbg=NONE
   autocmd VimEnter,ColorScheme * hi VertSplit    guibg=NONE ctermbg=NONE
